@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html ng-app='App'>
-
+<head>
+    <link rel='stylesheet' href='styles.css'>
+</head>
 <body ng-controller="mainController">
 	
     <form method=post ng-submit=get()>
-        <input type=text id=_num name=_num ng-model='num' placeholder='Contact #' ng-click='clearmsg()'>
-        <input type=submit value='Search' id=_search>
+        <input type=text id=_num name=_num ng-model='num' placeholder='Contact #' ng-click='clearmsg()'><br>
+        <input type=submit value='Search' id=_search><br>
         <p style='{{disp}};background-color:{{col}}'>{{msg}}</p>
-        <input type=text id=_name name=_name ng-model='name' placeholder='Name'>
-        <input type=text id=_company name=_company ng-model='company' placeholder='Company name'>
-        <input type=text id=_batch name=_batch ng-model='batch' placeholder='Batch'>
-        <input type=text id=_email name=_email ng-model='email' placeholder='E-mail'>
-        <input type=button value='Update' id=_submit ng-click='update()'>
+        <div class='details' style='{{dispdetails}}'>
+            <input type=text id=_name name=_name ng-model='name' placeholder='Name'><br>
+            <input type=text id=_company name=_company ng-model='company' placeholder='Company name'><br>
+            <input type=text id=_batch name=_batch ng-model='batch' placeholder='Batch'><br>
+            <input type=text id=_email name=_email ng-model='email' placeholder='E-mail'><br>
+            <input type=button value='Update' id=_submit ng-click='update()'>
+        </div>
     </form>
 
     <script src='jq.js'></script>

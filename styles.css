@@ -1,0 +1,14 @@
+body {
+    background-color: #222;
+    text-align:center;
+    margin:0;
+    font-family:helvetica,arial;
+}
+
+#_num, #_name, #_company, #_batch, #_email {
+    border:none;
+    background-color:transparent;
+    color: #eee;
+    font-size: 24px;
+    text-align: center;
+}
