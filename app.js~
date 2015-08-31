@@ -1,0 +1,24 @@
+var App=angular.module('App',[])
+
+App.controller('mainController', function($scope, $http){
+
+	$scope.name="test";
+	$scope.num="num"
+	$scope.company="com"
+	$scope.batch='batch'
+	$scope.email='mail'
+
+	
+	$http.get('tmp.json').
+	then(function(response) {
+
+		$scope.name=response.data.name;
+		//console.log(response.data)
+		$scope.num=response.data.num
+		$scope.company=response.data.company
+		$scope.batch=response.data.batch
+		$scope.email=response.data.email
+
+	});
+	
+})
