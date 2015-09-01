@@ -12,6 +12,7 @@ App.controller('mainController', function($scope, $http){
     $scope.dispdetails=hide
 
     $scope.get = function () {
+//        $http.get('one.json').then(function(response) {
         $http.get('?num='+$scope.num).then(function(response) {
             $scope.disp=hide
 	    	$scope.name=response.data.name
