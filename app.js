@@ -3,7 +3,7 @@ var App=angular.module('App',[])
 App.controller('mainController', function($scope, $http){
 
 
-    var hide='on';// 'hidden', not 'visible'
+    var hide='on'
     var show='off'
 
     $scope.disp=hide
@@ -14,13 +14,25 @@ App.controller('mainController', function($scope, $http){
     $scope.get = function () {
 //        $http.get('one.json').then(function(response) {
         $http.get('?num='+$scope.num).then(function(response) {
+
+//            var j=response.data.pop()
             $scope.disp=hide
-	    	$scope.name=response.data.name
+	    	
+            $scope.name=response.data.name
 		    $scope.num=response.data.num
     		$scope.company=response.data.company
 	    	$scope.batch=response.data.batch
 	    	$scope.email=response.data.email
+            
+//            $scope.name=j.name
+//		    $scope.num=j.num
+//    		$scope.company=j.company
+//	    	$scope.batch=j.batch
+//	    	$scope.email=j.email
+            
             $scope.dispdetails=show
+            
+//            if (j.name==undefined) {
             if (response.data.name==undefined) {
                 $scope.msg='Sorry, we don\'t have you in our database'
                 $scope.col='orange'
@@ -57,10 +69,15 @@ App.controller('mainController', function($scope, $http){
     
     $scope.clear = function () {
         $scope.name=''
-        $scope.num=''
+//        $scope.num=''
         $scope.company=''
         $scope.batch=''
         $scope.email=''
+    }
+    
+    $scope.add = function () {
+        $scope.dispdetails=show
+        $scope.clear()
     }
 
 });

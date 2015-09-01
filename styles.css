@@ -14,7 +14,7 @@ body {
     width: 600px;
 }
 
-#_search, #_submit, #_clear {
+#_search, #_submit, #_clear, #_add {
     margin-top: 10px;
     background-color: rgba(255,255,255,0.4);
     border-radius: 20px;
@@ -23,6 +23,7 @@ body {
 #_search {background-color: #9f0ac3;}
 #_submit {background-color: #64a501;}
 #_clear {background-color: #4b4b4b;}
+#_add {background-color: #4b4b4b;}
 
 .msg {
     margin-top: 10px;

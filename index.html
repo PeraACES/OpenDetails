@@ -17,7 +17,9 @@
 	
     <form method=post ng-submit=get()>
         <input type=text id=_num name=_num ng-model='num' placeholder='mobile' ng-click='clearmsg()' autocomplete=off><br>
-        <input class='btn' type=submit value='Search' id=_search><br>
+        <input class='btn' type=submit value='Search' id=_search>
+        <input class="btn" type=button value='+' id=_add ng-click='add()'>
+        <br>
         <p class="msg onoff {{disp}}" style='background-color:{{col}}'>{{msg}}</p>
         <div class='details onoff {{dispdetails}}' style=''>
             <input type=text id=_name name=_name ng-model='name' placeholder='name' autocomplete=off><br>
@@ -37,7 +39,7 @@
     
     <script src='jq.js'></script>
     <script src='ang.js'></script>
-    <script src='greyscale.js'></script>
+<!--    <script src='grayscale.js'></script>-->
     <script src='app.js'></script>
 </body>
 
