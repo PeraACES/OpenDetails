@@ -53,3 +53,19 @@ body {
     vertical-align: middle;
     display: table-cell;
 }
+
+input[type="button"],
+input[type="submit"]
+{
+   outline:none;
+}
+input[type="button"]:focus,
+input[type="submit"]:focus
+{
+   outline:none;
+}
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner
+{
+   border: 0;
+}

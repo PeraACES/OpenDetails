@@ -54,5 +54,13 @@ App.controller('mainController', function($scope, $http){
          $scope.disp=hide
          $scope.dispdetails=hide
     }
+    
+    $scope.clear = function () {
+        $scope.name=''
+        $scope.num=''
+        $scope.company=''
+        $scope.batch=''
+        $scope.email=''
+    }
 
 });
