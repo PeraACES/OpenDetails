@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html ng-app='App'>
 <head>
+    <title>Immense 2015</title>
     <link rel='stylesheet' href='styles.css'>
+    <link rel='stylesheet' href='boot.css'>
+    <link rel='stylesheet' href='grayscale.css'>
 </head>
 <body ng-controller="mainController">
+    
+<div class="site-wrapper">
+    
+<div></div>
+<div class="site-wrapper-inner">
+<div class="cover-container">
+<div class="inner cover">
 	
     <form method=post ng-submit=get()>
-        <input type=text id=_num name=_num ng-model='num' placeholder='Contact #' ng-click='clearmsg()'><br>
-        <input type=submit value='Search' id=_search><br>
-        <p style='{{disp}};background-color:{{col}}'>{{msg}}</p>
-        <div class='details' style='{{dispdetails}}'>
-            <input type=text id=_name name=_name ng-model='name' placeholder='Name'><br>
-            <input type=text id=_company name=_company ng-model='company' placeholder='Company name'><br>
-            <input type=text id=_batch name=_batch ng-model='batch' placeholder='Batch'><br>
-            <input type=text id=_email name=_email ng-model='email' placeholder='E-mail'><br>
-            <input type=button value='Update' id=_submit ng-click='update()'>
+        <input type=text id=_num name=_num ng-model='num' placeholder='mobile' ng-click='clearmsg()' autocomplete=off><br>
+        <input class='btn' type=submit value='Search' id=_search><br>
+        <p class="msg onoff {{disp}}" style='background-color:{{col}}'>{{msg}}</p>
+        <div class='details onoff {{dispdetails}}' style=''>
+            <input type=text id=_name name=_name ng-model='name' placeholder='name' autocomplete=off><br>
+            <input type=text id=_company name=_company ng-model='company' placeholder='company' autocomplete=off><br>
+            <input type=text id=_batch name=_batch ng-model='batch' placeholder='batch' autocomplete=off><br>
+            <input type=text id=_email name=_email ng-model='email' placeholder='e-mail' autocomplete=off><br>
+            <input class="btn" type=button value='Update' id=_submit ng-click='update()'>
         </div>
     </form>
 
+</div>
+</div>
+</div>
+    
+</div>
+    
     <script src='jq.js'></script>
     <script src='ang.js'></script>
+    <script src='greyscale.js'></script>
     <script src='app.js'></script>
 </body>
 

@@ -3,8 +3,8 @@ var App=angular.module('App',[])
 App.controller('mainController', function($scope, $http){
 
 
-    var hide='display:block'
-    var show='display:block';// NONE, not 'block'
+    var hide='on';// 'hidden', not 'visible'
+    var show='off'
 
     $scope.disp=hide
     $scope.msg=''
@@ -22,14 +22,14 @@ App.controller('mainController', function($scope, $http){
             $scope.dispdetails=show
             if (response.data.name==undefined) {
                 $scope.msg='Sorry, we don\'t have you in our database'
-                $scope.disp=show
                 $scope.col='orange'
+                $scope.disp=show
                 $scope.dispdetails=hide
             }
         },function(res){
             $scope.msg='Error '+res.status+' '+res.statusText
-            $scope.disp=show
             $scope.col='red'
+            $scope.disp=show
             $scope.dispdetails=hide
         })
     }
